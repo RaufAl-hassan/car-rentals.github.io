@@ -1,0 +1,276 @@
+:root {
+  --primary-font: "Noto Sans JP", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+  --primary-color: rgb(197, 39, 39);
+  --light-red: rgba(197, 39, 39, 0.692);
+  --light-grey: #f4f4f4;
+  --grey: #ccc;
+  --white: #fff;
+  --dark: #1e1e1e;
+}
+
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font: normal 1.3rem/1.7 var(--primary-font);
+  background: var(--white);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+ul {
+  list-style: none;
+}
+
+/* UTIL  */
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card-outline {
+  border: 0.2rem solid var(--light-grey);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.brand {
+  font-family: var(--secondary-font);
+}
+
+.brand a {
+  color: var(--white);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.d-sm {
+  display: none;
+}
+
+.active {
+  background: var(--primary-color);
+  color: var(--white) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.underline {
+  width: 15rem;
+  height: 0.5rem;
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.3rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: #ddd;
+  text-shadow: none;
+  border-radius: 0.5rem;
+}
+
+.btn-sm {
+  border: none;
+  outline: none;
+  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: #ddd;
+  text-shadow: none;
+  border-radius: 0.5rem;
+}
+
+.btn-red {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.h1 {
+  font-size: 3.6rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.text-red {
+  color: var(--primary-color);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/* ///////////////////////////////////////////////// */
+
+.hamburger-icon {
+  font-size: 1.6rem;
+}
+
+header {
+  background: url("../image/showcase.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  text-shadow: 0.2rem 0.2rem 0.2rem var(--dark);
+}
+
+header .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.nav-change {
+  background: var(--white);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-shadow: none;
+  color: var(--dark);
+}
+
+.nav-change a,
+.nav-change .container .right-links li a {
+  color: var(--dark);
+}
+
+header nav .container .right-links {
+  display: flex;
+}
+
+header nav .container .right-links li a {
+  display: block;
+  padding: 0.7rem 1rem;
+  color: var(--white);
+  font-size: 1.4rem;
+}
+
+header nav .container .right-links li a:hover {
+  background: var(--light-red);
+  color: var(--white);
+}
+
+header .showcase .container {
+  height: calc(100vh - 7.7rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+@media (max-width: 678px) {
+  /* UTILS */
+  .d-sm {
+    display: block;
+  }
+
+  .h1 {
+    font-size: 2.4rem;
+  }
+
+  .show-nav-links {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .brand {
+    font-family: var(--secondary-font);
+  }
+
+  .brand a {
+    color: var(--dark);
+  }
+
+  header {
+    color: var(--dark);
+    text-shadow: none;
+    margin-top: 5.5rem;
+    height: calc(100vh - 5.5rem);
+  }
+
+  header .container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+  }
+
+  header nav {
+    background: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+
+  header nav .container .right-links {
+    display: none;
+  }
+
+  header nav .container .right-links li a {
+    color: var(--dark);
+  }
+
+  header .showcase .container {
+    text-shadow: 0.2rem 0.2rem 0.2rem var(--dark);
+  }
+
+  .brands .brand-imgs {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .brands .brand-imgs a {
+    display: block;
+    text-align: center;
+    flex-basis: 33.33%;
+  }
+}
