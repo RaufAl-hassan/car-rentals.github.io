@@ -17,7 +17,6 @@ $hamburgerIcon.addEventListener("click", (e) => {
 
 // CLOSE NAV LINKS WHEN MOUSE LEAVES NAV
 $nav.addEventListener("mouseleave", hideNavLinks);
-$nav.addEventListener("touchend", hideNavLinks);
 
 const options = {
   rootMargin: "-100px 0px 0px 0px",
