@@ -3,8 +3,9 @@
   --secondary-font: "Roboto", sans-serif;
   --primary-color: rgb(197, 39, 39);
   --light-red: rgba(197, 39, 39, 0.692);
-  --light-grey: #f4f4f4;
+  --light-grey: hsl(0, 0%, 96%);
   --grey: #ccc;
+  --deep-grey: #686868;
   --white: #fff;
   --dark: #1e1e1e;
 }
@@ -42,10 +43,30 @@ ul {
   padding: 1rem;
 }
 
+.card {
+  padding: 1rem;
+}
+
 .card-outline {
   border: 0.2rem solid var(--light-grey);
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-gap-1 {
+  grid-gap: 1rem;
+}
+
+.bg-grey {
+  background: var(--grey);
 }
 
 .brand {
@@ -66,6 +87,10 @@ ul {
 
 .py-1 {
   padding: 1rem 0;
+}
+
+.py-5 {
+  padding: 5rem 0;
 }
 
 .d-sm {
@@ -96,7 +121,6 @@ ul {
   margin-bottom: 0.5rem;
   background: #ddd;
   text-shadow: none;
-  border-radius: 0.5rem;
 }
 
 .btn-sm {
@@ -107,7 +131,6 @@ ul {
   margin-bottom: 0.5rem;
   background: #ddd;
   text-shadow: none;
-  border-radius: 0.5rem;
 }
 
 .btn-red {
@@ -118,16 +141,37 @@ ul {
 .h1 {
   font-size: 3.6rem;
 }
+.h2 {
+  font-size: 3rem;
+}
+.h3 {
+  font-size: 2.8rem;
+}
+.h4 {
+  font-size: 2.4rem;
+}
+.h5 {
+  font-size: 2rem;
+}
+.h6 {
+  font-size: 1.6rem;
+}
 
 .mb-1 {
   margin-bottom: 1rem;
 }
+
 .text-red {
   color: var(--primary-color);
 }
-
 .text-white {
   color: var(--white);
+}
+.text-grey {
+  color: var(--grey);
+}
+.text-deep-grey {
+  color: var(--deep-grey);
 }
 
 .d-flex {
@@ -206,6 +250,14 @@ header .showcase .container {
   align-items: start;
 }
 
+.helper article {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 678px) {
   /* UTILS */
   .d-sm {
@@ -213,7 +265,22 @@ header .showcase .container {
   }
 
   .h1 {
+    font-size: 2.6rem;
+  }
+  .h2 {
     font-size: 2.4rem;
+  }
+  .h3 {
+    font-size: 2.1rem;
+  }
+  .h4 {
+    font-size: 1.9rem;
+  }
+  .h5 {
+    font-size: 1.6rem;
+  }
+  .h6 {
+    font-size: 1.4rem;
   }
 
   .show-nav-links {
