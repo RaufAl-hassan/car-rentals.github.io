@@ -264,6 +264,10 @@ header .showcase .container {
     display: block;
   }
 
+  .col-sm-1 {
+    grid-template-columns: 1fr;
+  }
+
   .h1 {
     font-size: 2.6rem;
   }
